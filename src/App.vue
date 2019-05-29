@@ -14,9 +14,11 @@
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn to="/" flat class="white--text">Página Inicial</v-btn>
-          <v-btn to="/perfil" flat class="white--text" v-if="logado">Perfil</v-btn>
+          <v-btn to="/perfil" flat class="white--text" v-if="logado">
+            <v-icon color="white">person</v-icon>Perfil</v-btn>
           <v-btn to="/login" flat class="white--text" v-else="logado">Logar</v-btn>
-          <v-btn to="/cadastrarI" flat class="white--text" v-if="logado">Cadastrar Imovel</v-btn>
+          <v-btn to="/cadastrar" flat class="white--text" v-if="logado">
+            <v-icon color="white">attachment</v-icon>Cadastrar Imovel</v-btn>
         </v-toolbar-items>
     </v-toolbar>
     <v-navigation-drawer 
@@ -31,7 +33,7 @@
       <v-list dense>
         <v-list-tile to="/">
           <v-list-tile-action>
-            <v-icon color="light-blue darken-2">dashboard</v-icon>
+            <v-icon color="light-blue darken-2">apps</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             Início
@@ -53,6 +55,15 @@
             Exemplo de Cartão
           </v-list-tile-content>
         </v-list-tile>
+        <v-list-tile to="/cadastrar">
+          <v-list-tile-action>
+            <v-icon color="light-blue darken-2">attachment</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+              Cadastrar Imovel
+          </v-list-tile-content>
+        </v-list-tile>
+        
       </v-list>
     </v-navigation-drawer>
     <v-content>
@@ -70,7 +81,7 @@
     data(){
       return{
         exibe: false,
-        logado: false
+        logado: true
       }
     } 
   }
