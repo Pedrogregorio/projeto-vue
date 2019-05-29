@@ -1,4 +1,20 @@
 <template>
+  <div>
+  <v-layout justify-center>
+    <v-flex  
+      text-xs-center
+       xs10 sm6 m6 md5
+       id="cor">
+      <h1>Paaso a passo de como publicar um imovel</h1><br>
+      <h1 class="hidden-md-and-down">=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-</h1>
+      <h3><li>Passo 1°</li></h3><br>
+      Primeiro você deve clicar no botao abaixo escrito
+      <b>cadastrar</b> 
+      <h3><li>Passo 2°</li></h3>
+      <h3><li>Passo 3°</li></h3>
+      <h3><li>Passo 4°</li></h3>
+    </v-flex>
+  </v-layout>
         <v-layout justify-center>
           <v-dialog v-model="dialog" persistent max-width="600px">
             <template v-slot:activator="{ on }">
@@ -57,7 +73,20 @@
             </v-card>
         </v-dialog>
         </v-layout>
+      </div>
       </template>
+      <style>
+        #cor{
+          background: rgba(21,101,192,0.46);
+background: -moz-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(21,101,192,0.46)), color-stop(16%, rgba(21,101,192,0.45)), color-stop(42%, rgba(21,101,192,0.43)), color-stop(51%, rgba(21,101,192,0.43)), color-stop(71%, rgba(21,101,192,0.42)), color-stop(100%, rgba(21,101,192,0.4)));
+background: -webkit-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
+background: -o-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
+background: -ms-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
+background: radial-gradient(ellipse at center, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1565c0', endColorstr='#1565c0', GradientType=1 );
+        }
+      </style>
       
 <script>
         export default {
