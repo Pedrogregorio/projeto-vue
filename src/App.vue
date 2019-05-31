@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app >
       
           <!--https://material.io/tools/icons/-->
           
@@ -10,13 +10,13 @@
         ></v-toolbar-side-icon>
         
         <v-spacer></v-spacer>
-        <v-toolbar-title justify-center>C A V I</v-toolbar-title>
+        <v-toolbar-title class="font-weight-black" justify-center><b>C</b>ompra <b>A</b>luguel e <b>V</b>enda de <b>I</b>moveis</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn to="/" flat class="white--text">Página Inicial</v-btn>
           <v-btn to="/perfil" flat class="white--text" v-if="logado">
             <v-icon color="white">person</v-icon>Perfil</v-btn>
-          <v-btn to="/login" flat class="white--text" v-else="logado">Logar</v-btn>
+          <v-btn to="/login" flat class="white--text" v-else="">Logar</v-btn>
           <v-btn to="/cadastrar" flat class="white--text" v-if="logado">
             <v-icon color="white">attachment</v-icon>Cadastrar Imovel</v-btn>
         </v-toolbar-items>
@@ -66,7 +66,7 @@
         
       </v-list>
     </v-navigation-drawer>
-    <v-content>
+    <v-content class="blue lighten-4">
             
       <router-view>
       </router-view>
