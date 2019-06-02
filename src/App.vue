@@ -3,7 +3,7 @@
       
           <!--https://material.io/tools/icons/-->
           
-    <v-toolbar color="light-blue darken-2 white--text" > 
+    <v-toolbar color="light-blue darken-2 white--text" v-if="login"> 
         <v-toolbar-side-icon 
           class="white--text"
           @click="exibe = !exibe"
@@ -66,7 +66,7 @@
         
       </v-list>
     </v-navigation-drawer>
-    <v-content class="blue lighten-4">
+    <v-content class="light-blue lighten-2">
             
       <router-view>
       </router-view>
