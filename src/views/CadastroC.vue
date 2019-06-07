@@ -1,18 +1,21 @@
 <template>
-  <div>
+  <div class="Jumbotron">
   <v-layout justify-center>
     <v-flex  
-      text-xs-center
        xs10 sm6 m6 md5
-       id="cor">
-      <h1>Paaso a passo de como publicar um imovel</h1><br>
-      <h1 class="hidden-md-and-down">=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-</h1>
-      <h3><li>Passo 1°</li></h3><br>
-      Primeiro você deve clicar no botao abaixo escrito
+       class="cor">
+      <h2 class="bar">Paso a passo de como publicar um imóvel</h2><br>
+      
+      <!--<h1 class="hidden-md-and-down">=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-</h1>-->
+      <div class="cartao_passo">
+      <h3><li>Passo 1°</li></h3>
+            Primeiro você deve clicar no botao abaixo escrito
       <b>cadastrar</b> 
       <h3><li>Passo 2°</li></h3>
+            Logo em seguida, você ira preencher o formulario
       <h3><li>Passo 3°</li></h3>
       <h3><li>Passo 4°</li></h3>
+      </div>
     </v-flex>
   </v-layout>
         <v-layout justify-center>
@@ -21,8 +24,8 @@
                 <v-btn color="primary" dark v-on="on">Cadastrar</v-btn>
             </template>
             <v-card>
-              <v-card-title>
-                <span class="headline">Preencrer Formulario</span>
+              <v-card-title class="bar">
+                <span class="headline" >Preencrer Formulario</span>
               </v-card-title>
               <v-card-text>
                 <v-container grid-list-md>
@@ -42,15 +45,18 @@
                       ></v-text-field>
                     </v-flex>
                     <v-flex xs12>
-                      <v-text-field label="Email*" required></v-text-field>
+                      <v-text-field label="Email" required></v-text-field>
                     </v-flex>
                     <v-flex xs12>
-                      <v-text-field label="Password*" type="password" required></v-text-field>
+                      <v-text-field label="Senha" type="password" required></v-text-field>
+                    </v-flex>
+                     <v-flex xs12>
+                      <v-text-field label="Comfirme sua senha" type="password" required></v-text-field>
                     </v-flex>
                     <v-flex xs12 sm6>
                       <v-select
-                        :items="['0-17', '18-29', '30-54', '54+']"
-                        label="Age*"
+                        :items="[ '18 - 29', '30 - 54', '60+']"
+                        label="Idade (+18)"
                         required
                       ></v-select>
                     </v-flex>
@@ -63,9 +69,9 @@
                     </v-flex>
                   </v-layout>
                 </v-container>
-                <small>*indicates required field</small>
+                <small>Insira informações valida acima, obrigado.</small>
               </v-card-text>
-              <v-card-actions>
+              <v-card-actions class="bar">
                 <v-spacer></v-spacer>
                 <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
                 <v-btn color="blue darken-1" flat @click="dialog = false">Save</v-btn>
@@ -75,19 +81,50 @@
         </v-layout>
       </div>
       </template>
+
+<!-- Style -->
       <style>
-        #cor{
-          background: rgba(21,101,192,0.46);
-background: -moz-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
-background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(21,101,192,0.46)), color-stop(16%, rgba(21,101,192,0.45)), color-stop(42%, rgba(21,101,192,0.43)), color-stop(51%, rgba(21,101,192,0.43)), color-stop(71%, rgba(21,101,192,0.42)), color-stop(100%, rgba(21,101,192,0.4)));
-background: -webkit-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
-background: -o-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
-background: -ms-radial-gradient(center, ellipse cover, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
-background: radial-gradient(ellipse at center, rgba(21,101,192,0.46) 0%, rgba(21,101,192,0.45) 16%, rgba(21,101,192,0.43) 42%, rgba(21,101,192,0.43) 51%, rgba(21,101,192,0.42) 71%, rgba(21,101,192,0.4) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1565c0', endColorstr='#1565c0', GradientType=1 );
+
+            @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+
+            .cor{
+
+              background: #0288d1;
+              -webkit-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+              -moz-box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+              box-shadow: 0px 0px 8px -1px rgba(0,0,0,0.75);
+              font-family: 'Montserrat', sans-serif;
+            }
+
+            .Jumbotron {
+              padding: 15px;
+              margin-top: 1rem;
+              
+
+            }
+
+            .bar {
+
+              background-color: whitesmoke;
+              padding: 15px;
+              text-align: center;
+              
+
+            }
+
+            .cartao_passo {
+              font-size: 12px;
+              padding: 2%;
+              padding-left: 1.5rem;
+              text-align: left;
+              color: white;
+
         }
       </style>
       
+
+
 <script>
         export default {
           data: () => ({
