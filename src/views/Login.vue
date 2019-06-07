@@ -1,5 +1,5 @@
 <template>
-    <v-layout align-center justify-center fill-height id="colo">
+    <v-layout align-center justify-center fill-height >
 	    <v-flex  xs10 sm5 md4 lg3 justify-center class="pa-3" id="p">
         <v-text-field
             label="E-mail"
@@ -23,18 +23,14 @@
 	export default {
     data(){
       return{
-        esconder: true
+				esconder: false,
+				login: false
       }
     } 
   }
 
 </script>
 <style>
-	
-	#colo{
-		background-color: #4FC3F7;
-	}
-
 	#p{
 		background: rgba(0,0,0,0.7);
 		background: -moz-linear-gradient(left, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 47%, rgba(0,0,0,0.7) 70%);
