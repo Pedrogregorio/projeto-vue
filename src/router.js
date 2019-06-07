@@ -5,7 +5,7 @@ import Inicio from './views/Inicio.vue'
 import Menu from './views/Menu.vue'
 import Cartao from './views/Cartao.vue'
 import Cadastro from './views/CadastroC.vue'
-
+import atividade from './views/AT_marcelo.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -36,6 +36,11 @@ export default new Router({
       path: '/Cadastrar',
       name: 'Cadastro',
       component: Cadastro
+    },
+    {
+      path: '/at',
+      name: 'atividade',
+      component: atividade
     }
   ]
 })
