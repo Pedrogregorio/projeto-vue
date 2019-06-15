@@ -3,7 +3,7 @@
       
           <!--https://material.io/tools/icons/-->
           
-    <v-toolbar color="light-blue darken-2 white--text" v-if="login"> 
+    <v-toolbar color="light-blue darken-2 white--text"> 
         <v-toolbar-side-icon 
           class="white--text"
           @click="exibe = !exibe"

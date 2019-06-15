@@ -61,7 +61,10 @@
                     ></v-autocomplete>
                   </v-flex>
                   <v-flex xs12 sm6 md4>
-                  <v-text-field label="Preço" required></v-text-field>
+                  <v-text-field 
+                  label="Preço" 
+                  required  
+                  prefix="R$"></v-text-field>
                   </v-flex>
                 </v-layout>
               </v-container>
@@ -77,8 +80,7 @@
         </v-dialog>
     </v-card>
   </v-layout>
-      </template>
-
+</template>
 <!-- Style -->
       <style>
         #cor{
@@ -92,10 +94,7 @@
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1565c0', endColorstr='#1565c0', GradientType=1 );
 
         }
-      </style>
-      
-
-
+</style>
 <script>
         export default {
           data: () => ({
@@ -103,4 +102,4 @@
             show: false
           })
         }
-      </script>
+</script>

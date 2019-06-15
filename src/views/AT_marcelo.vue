@@ -1,4 +1,4 @@
-</<template>
+<template>
     <div>
         <v-carousel>
     <v-carousel-item
@@ -9,7 +9,6 @@
   </v-carousel>
     </div>    
 </template>
-
 <script>
   export default {
     data () {
