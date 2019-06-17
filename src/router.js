@@ -6,6 +6,7 @@ import Menu from './views/Menu.vue'
 import Cartao from './views/Cartao.vue'
 import Cadastro from './views/CadastroC.vue'
 import atividade from './views/AT_marcelo.vue'
+import Perfil from './views/Perfil.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -21,6 +22,11 @@ export default new Router({
       path: '/',
       name: 'inicio',
       component: Inicio
+    },
+    {
+      path: '/perfil',
+      name: 'perfil',
+      component: Perfil
     },
     {
       path: '/menu',

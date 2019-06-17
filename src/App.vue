@@ -3,32 +3,38 @@
       
           <!--https://material.io/tools/icons/-->
           
-    <v-toolbar color="light-blue darken-2 white--text"> 
+    <v-toolbar color="light-blue--text"> 
         <v-toolbar-side-icon 
-          class="white--text"
+          class="light-blue--text
+"
           @click="exibe = !exibe"
         ></v-toolbar-side-icon>
         
         <v-spacer></v-spacer>
-        <v-toolbar-title class="font-weight-black" justify-center><b>C</b>ompra <b>A</b>luguel e <b>V</b>enda de <b>I</b>moveis</v-toolbar-title>
+        <v-toolbar-title class="font-weight-black " justify-center><b>C</b>ompra <b>A</b>luguel e <b>V</b>enda de <b>I</b>moveis</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn to="/" flat class="white--text">Página Inicial</v-btn>
-          <v-btn to="/perfil" flat class="white--text" v-if="logado">
-            <v-icon color="white">person</v-icon>Perfil</v-btn>
-          <v-btn to="/login" flat class="white--text" v-else="">Logar</v-btn>
-          <v-btn to="/cadastrar" flat class="white--text" v-if="logado">
-            <v-icon color="white">attachment</v-icon>Cadastrar Imovel</v-btn>
+        <v-toolbar-items class="hidden-sm-and-down light-blue--text">
+          <v-btn to="/" flat class="light-blue--text">Página Inicial</v-btn>
+          <v-btn to="/cadastrar" flat class="light-blue--text" v-if="logado">
+            <v-icon color="light-blue--text">attachment</v-icon>Cadastrar Imovel</v-btn>
         </v-toolbar-items>
     </v-toolbar>
     <v-navigation-drawer 
       absolute
       temporary
       v-model="exibe"
+      
     >
-      <v-toolbar color="light-blue darken-2 white--text">
-        <h1>C A V I</h1>
-      </v-toolbar>
+      
+        <v-img :aspect-ratio="16/9" src="https://cdn.pixabay.com/photo/2016/11/22/23/03/hardwood-1851071_960_720.jpg">
+        <v-layout pa-2 column fill-height class="lightbox white--text">
+          <v-spacer></v-spacer>
+          <v-flex shrink>
+            <div class="subheading">{{name}}</div>
+            <div class="body-1">{{email}}</div>
+          </v-flex>
+        </v-layout>
+      </v-img>
       <v-divider></v-divider>
       <v-list dense>
         <v-list-tile to="/">
@@ -66,7 +72,8 @@
         
       </v-list>
     </v-navigation-drawer>
-    <v-content class="light-blue lighten-2">
+    <v-content class="light-blue lighten-5
+">
             
       <router-view>
       </router-view>
@@ -81,9 +88,20 @@
     data(){
       return{
         exibe: false,
-        logado: true
+        logado: true,
+        name: 'Pedro G',
+        email: 'pedrogregoriodias675@gmail.com'
       }
     } 
   }
 </script>
+<style scoped>
+  .v-navigation-drawer {
+    transition: none !important;
+  }
 
+  .lightbox {
+    box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
+  }
+</style>
