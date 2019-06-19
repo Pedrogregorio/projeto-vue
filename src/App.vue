@@ -45,20 +45,12 @@
             Início
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile to="/login">
+        <v-list-tile to="/perfil">
           <v-list-tile-action>
             <v-icon color="light-blue darken-2">person</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
-            Login
-          </v-list-tile-content>
-        </v-list-tile>
-        <v-list-tile to="/cartao">
-          <v-list-tile-action>
-            <v-icon color="light-blue darken-2">credit_card</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-content>
-            Exemplo de Cartão
+            Perfil
           </v-list-tile-content>
         </v-list-tile>
         <v-list-tile to="/cadastrar">
@@ -72,8 +64,7 @@
         
       </v-list>
     </v-navigation-drawer>
-    <v-content class="light-blue lighten-5
-">
+    <v-content class="light-blue lighten-5">
             
       <router-view>
       </router-view>

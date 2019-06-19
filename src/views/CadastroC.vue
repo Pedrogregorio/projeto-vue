@@ -99,7 +99,7 @@
         export default {
           data: () => ({
             dialog: false,
-            show: false
+            show: false, 
           })
         }
 </script>
