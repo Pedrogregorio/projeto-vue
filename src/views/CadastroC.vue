@@ -35,7 +35,8 @@
                   <v-flex xs12 sm6 md4>
                     <v-text-field
                       label="Telefone"
-                      type="number"
+                      prefix="+55"
+                      type="tel"
                       persistent-hint
                       required
                     ></v-text-field>
@@ -63,7 +64,9 @@
                   <v-flex xs12 sm6 md4>
                   <v-text-field 
                   label="Preço" 
-                  required  
+                  required 
+                  type="number"
+                  maxlength="13" 
                   prefix="R$"></v-text-field>
                   </v-flex>
                 </v-layout>

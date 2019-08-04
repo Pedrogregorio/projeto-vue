@@ -1,15 +1,11 @@
 <template>
   <v-app >
-      
-          <!--https://material.io/tools/icons/-->
-          
+    <!--https://material.io/tools/icons/-->
     <v-toolbar color="light-blue--text"> 
         <v-toolbar-side-icon 
-          class="light-blue--text
-"
+          class="light-blue--text"
           @click="exibe = !exibe"
         ></v-toolbar-side-icon>
-        
         <v-spacer></v-spacer>
         <v-toolbar-title class="font-weight-black " justify-center><b>C</b>ompra <b>A</b>luguel e <b>V</b>enda de <b>I</b>moveis</v-toolbar-title>
         <v-spacer></v-spacer>
@@ -23,9 +19,7 @@
       absolute
       temporary
       v-model="exibe"
-      
     >
-      
         <v-img :aspect-ratio="16/9" src="https://cdn.pixabay.com/photo/2016/11/22/23/03/hardwood-1851071_960_720.jpg">
         <v-layout pa-2 column fill-height class="lightbox white--text">
           <v-spacer></v-spacer>
@@ -69,9 +63,7 @@
       <router-view>
       </router-view>
     </v-content>
-    
   </v-app>
-  
 </template>
 <script>
   
