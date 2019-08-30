@@ -79,10 +79,15 @@
               <v-btn color="blue darken-1" flat @click="dialog = false">Save</v-btn>
             </v-card-actions>
           </v-card>
-
         </v-dialog>
-    </v-card>
+        </v-card>
+    <v-alert
+      type="success"
+    >
+      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
+    </v-alert>
   </v-layout>
+  
 </template>
 <!-- Style -->
       <style>
@@ -102,7 +107,8 @@
         export default {
           data: () => ({
             dialog: false,
-            show: false, 
+            show: true,
+            card: false, 
           })
         }
 </script>
