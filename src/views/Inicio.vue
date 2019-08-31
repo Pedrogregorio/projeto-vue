@@ -2,6 +2,7 @@
     <div>
 		<v-carousel>
 			<v-carousel-item v-for="m in imagens" :key="m.link" :src="m.link">
+                
 			</v-carousel-item>
 		</v-carousel>	
 		
@@ -14,11 +15,11 @@
                 ></v-img>
                 <v-card-title>
                     {{casa.descricao}}
+                    <span class="title">{{casa.preco}}</span>
                 </v-card-title>
                 <v-card-text>
                     Tamanho: {{casa.tamanhoC}} construído <br>
                     Terreno: {{casa.tamanhoT}} <br>
-                    Valor: {{casa.preco}} <br>
                 </v-card-text>
                 <v-card-actions>
                     <v-btn block color="info" small>Comprar</v-btn>
@@ -32,6 +33,7 @@
 export default {
 	data(){
 		return{
+            logado: true,
 			imagens:[
 				{link: "https://www.plantasdecasas.com/wp-content/uploads/2015/10/house_102_fix_800.jpg"},
 				{link: "https://www.plantasdecasas.com/wp-content/uploads/2013/10/Fachadas-de-casas-107.jpg"},
@@ -40,13 +42,6 @@ export default {
 				
       ],
       casas: [
-               {
-                   descricao: "Casa Moreninha 1",
-                   tamanhoT: "12 x 20",
-                   tamanhoC: "50m²",
-                   imagem:"https://cdn.vuetifyjs.com/images/cards/desert.jpg",
-                   preco: "R$ 70.000,00"
-               },
                {
                    descricao: "Apartamento Moreninha II",
                    tamanhoT: "40m²",

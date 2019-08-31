@@ -1,7 +1,7 @@
 <template>
   <v-app >
     <!--https://material.io/tools/icons/-->
-    <v-toolbar color="light-blue--text"> 
+    <v-toolbar color="light-blue--text" v-if="logado"> 
         <v-toolbar-side-icon 
           class="light-blue--text"
           @click="exibe = !exibe"
@@ -9,11 +9,7 @@
         <v-spacer></v-spacer>
         <v-toolbar-title class="font-weight-black " justify-center><b>C</b>ompra <b>A</b>luguel e <b>V</b>enda de <b>I</b>moveis</v-toolbar-title>
         <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down light-blue--text">
-          <v-btn to="/" flat class="light-blue--text">Página Inicial</v-btn>
-          <v-btn to="/cadastrar" flat class="light-blue--text" v-if="logado">
-            <v-icon color="light-blue--text">attachment</v-icon>Cadastrar Imovel</v-btn>
-        </v-toolbar-items>
+        
     </v-toolbar>
     <v-navigation-drawer 
       absolute
@@ -31,7 +27,7 @@
       </v-img>
       <v-divider></v-divider>
       <v-list dense>
-        <v-list-tile to="/">
+        <v-list-tile to="/inicio">
           <v-list-tile-action>
             <v-icon color="light-blue darken-2">apps</v-icon>
           </v-list-tile-action>
@@ -66,7 +62,7 @@
   </v-app>
 </template>
 <script>
-  
+import logado from './views/Login.vue';
   export default {
     data(){
       return{

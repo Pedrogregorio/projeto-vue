@@ -1,6 +1,6 @@
 <template>
   <v-layout align-center justify-center row fill-height>
-    <v-card justify-center class="pa-4">  
+    <v-card justify-center class="pa-4 ">  
       <v-card-title primary-title >
         <div>
           <div class="headline">PASSO A PASSO DE COMO PUBLICAR UM IMOVEL</div>
@@ -45,7 +45,7 @@
                     <v-text-field label="Email*" required></v-text-field>
                   </v-flex>
                   <v-flex xs12>
-                    <v-text-field label="Password*" type="password" required></v-text-field>
+                    <v-text-field label="Senha*" type="password" required></v-text-field>
                   </v-flex>
                   <v-flex xs12 sm6>
                     <v-select
@@ -75,8 +75,23 @@
             </v-card-text>
             <v-card-actions>
               <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" flat @click="dialog = false">Close</v-btn>
-              <v-btn color="blue darken-1" flat @click="dialog = false">Save</v-btn>
+              <v-btn color="blue darken-1" flat @click="dialog = false">Cancelar
+              </v-btn>
+
+              <v-dialog v-model="dialogg" persistent max-width="290">
+                <template v-slot:activator="{ on }">
+                  <v-btn color="blue darken-1" flat v-on="on">Salvar</v-btn>
+                </template>
+                <v-card>
+                  <v-card-title class="headline">Tudo Certo?</v-card-title>
+                  <v-card-text>Seus dados estao corretos?</v-card-text>
+                  <v-card-actions>
+                    <div class="flex-grow-1"></div>
+                    <v-btn color="blue darken-1" flat text @click="dialogg = false">Nao</v-btn>
+                    <v-btn color="blue darken-1" flat text @click="dialog = false">Sim</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
             </v-card-actions>
           </v-card>
 
@@ -102,6 +117,7 @@
         export default {
           data: () => ({
             dialog: false,
+            dialogg: false,
             show: false, 
           })
         }

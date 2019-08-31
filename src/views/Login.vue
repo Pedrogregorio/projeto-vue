@@ -33,7 +33,7 @@
     data(){
       return{
 				esconder: false,
-				login: false
+				logado: false
       }
     } 
   }
