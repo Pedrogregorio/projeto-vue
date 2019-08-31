@@ -94,10 +94,15 @@
               </v-dialog>
             </v-card-actions>
           </v-card>
-
         </v-dialog>
-    </v-card>
+        </v-card>
+    <v-alert
+      type="success"
+    >
+      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
+    </v-alert>
   </v-layout>
+  
 </template>
 <!-- Style -->
       <style>
@@ -117,8 +122,13 @@
         export default {
           data: () => ({
             dialog: false,
+<<<<<<< HEAD
             dialogg: false,
             show: false, 
+=======
+            show: true,
+            card: false, 
+>>>>>>> fb45eeb05c5ff66204049c31f79f070094460d41
           })
         }
 </script>
