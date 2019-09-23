@@ -1,100 +1,47 @@
 <template>
     <v-layout align-center justify-center fill-height>
-
-        <v-card
-        class="mx-auto"
-        max-width="500"
-        >
-        <v-card-title class="title font-weight-regular justify-space-between">
-        <span>{{ currentTitle }}</span>
-        <v-avatar
-            color="primary lighten-2"
-            class="subheading white--text"
-            size="24"
-            v-text="step"
-        ></v-avatar>
-        </v-card-title>
-
-        <v-window v-model="step">
-        <v-window-item :value="1">
-            <v-card-text>
-            <v-text-field
-                label="Email"
-                value="john@vuetifyjs.com"
-            ></v-text-field>
-            <span class="caption grey--text text--darken-1">
-                This is the email you will use to login to your Vuetify account
-            </span>
-            </v-card-text>
-        </v-window-item>
-
-        <v-window-item :value="2">
-            <v-card-text>
-            <v-text-field
-                label="Password"
-                type="password"
-            ></v-text-field>
-            <v-text-field
-                label="Confirm Password"
-                type="password"
-            ></v-text-field>
-            <span class="caption grey--text text--darken-1">
-                Please enter a password for your account
-            </span>
-            </v-card-text>
-        </v-window-item>
-
-        <v-window-item :value="3">
-            <div class="pa-4 text-center">
-            <v-img
-                class="mb-4"
-                contain
-                height="128"
-                src="https://cdn.vuetifyjs.com/images/logos/v.svg"
-            ></v-img>
-            <h3 class="title font-weight-light mb-2">Welcome to Vuetify</h3>
-            <span class="caption grey--text">Thanks for signing up!</span>
-            </div>
-        </v-window-item>
-        </v-window>
-
-        <v-divider></v-divider>
-
-        <v-card-actions>
-        <v-btn
-            :disabled="step === 1"
-            text
-            @click="step--"
-        >
-            Back
-        </v-btn>
-        <div class="flex-grow-1"></div>
-        <v-btn
-            :disabled="step === 3"
-            color="primary"
-            depressed
-            @click="step++"
-        >
-            Next
-        </v-btn>
-        </v-card-actions>
-    </v-card>
+      <v-flex xs12 sm8 md4>
+            <v-card class="elevation-12">
+              <v-toolbar dark color="primary">
+                <v-toolbar-title>Faça Seu Cadastro</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-tooltip right>
+                  <template v-slot:activator="{ on }">
+                    <v-btn icon large href="https://codepen.io/johnjleider/pen/wyYVVj" target="_blank" v-on="on">
+                      <v-icon large>mdi-codepen</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>Codepen</span>
+                </v-tooltip>
+              </v-toolbar>
+              <v-card-text>
+                <v-form>
+                  <v-text-field id="nome" name="Nome" label="Nome" type="text"></v-text-field>
+                  <v-text-field id="sob" name="Sobrenome" label="Sobrenome" type="text"></v-text-field>
+                  <v-text-field id="email" name="Email" label="E-mail" type="E-mail"></v-text-field>
+                  <v-text-field id="senha" name="password" label="Senha" type="password"></v-text-field>
+                  <v-text-field id="senha" name="password" label="Confirme a senha" type="password"></v-text-field>
+                </v-form>
+              </v-card-text>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" @click="pedro()">Cadastrar</v-btn>
+                
+              </v-card-actions>
+            </v-card>
+          </v-flex>
     </v-layout>
 </template>
 <script>
-  export default {
-    data: () => ({
-      step: 1,
-    }),
+  var nome = document.getElementById("nome");
+  var sob = document.getElementById("nome");
+  var email = document.getElementById("nome");
+  var senha = document.getElementById("nome");
 
-    computed: {
-      currentTitle () {
-        switch (this.step) {
-          case 1: return 'Sign-up'
-          case 2: return 'Create a password'
-          default: return 'Account created'
-        }
-      },
-    },
+  function pedro() {
+    localStorage.setItem('nome', nome);
   }
+   var pedro = localStorage.getItem('nome');
+   alert(pedro);
+
 </script>

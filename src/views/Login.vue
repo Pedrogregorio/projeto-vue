@@ -1,5 +1,5 @@
 <template>
-    <v-layout align-center justify-center fill-height >
+    <v-layout align-center justify-center fill-height>
 	    <v-flex xs12 sm8 md4>
             <v-card class="elevation-12">
               <v-toolbar dark color="primary">

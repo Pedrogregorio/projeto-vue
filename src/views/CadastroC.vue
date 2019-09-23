@@ -122,13 +122,8 @@
         export default {
           data: () => ({
             dialog: false,
-<<<<<<< HEAD
             dialogg: false,
             show: false, 
-=======
-            show: true,
-            card: false, 
->>>>>>> fb45eeb05c5ff66204049c31f79f070094460d41
           })
         }
 </script>
