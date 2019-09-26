@@ -26,6 +26,11 @@
               </v-card-actions>
             </v-card>
           </v-flex>
+          <google-map>
+  <google-map-region v-bind:shape="cityBoundaries">
+    <google-map-markers v-bind:places="iceCreamShops"></google-map-markers>
+  </google-map-region>
+</google-map>
 	</v-layout>
 </template>
 <script>
@@ -33,7 +38,6 @@
     data(){
       return{
 				esconder: false,
-				logado: false
       }
     } 
   }

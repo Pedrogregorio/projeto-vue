@@ -1,7 +1,7 @@
 <template>
-  <v-app >
+  <v-app>
     <!--https://material.io/tools/icons/-->
-    <v-toolbar color="light-blue--text" v-if="logado"> 
+    <v-toolbar color="light-blue--text"> 
         <v-toolbar-side-icon 
           class="light-blue--text"
           @click="exibe = !exibe"
@@ -43,7 +43,7 @@
             Perfil
           </v-list-tile-content>
         </v-list-tile>
-        <v-list-tile to="/cadastrar">
+        <v-list-tile to="/CadastrarImovel">
           <v-list-tile-action>
             <v-icon color="light-blue darken-2">attachment</v-icon>
           </v-list-tile-action>
@@ -62,12 +62,10 @@
   </v-app>
 </template>
 <script>
-import logado from './views/Login.vue';
   export default {
     data(){
       return{
         exibe: false,
-        logado: true,
         name: 'Pedro G',
         email: 'pedrogregoriodias675@gmail.com'
       }

@@ -84,7 +84,7 @@
                 </template>
                 <v-card>
                   <v-card-title class="headline">Tudo Certo?</v-card-title>
-                  <v-card-text>Seus dados estao corretos?</v-card-text>
+                  <v-card-text>Vamos publicar esse imovel?</v-card-text>
                   <v-card-actions>
                     <div class="flex-grow-1"></div>
                     <v-btn color="blue darken-1" flat text @click="dialogg = false">Nao</v-btn>
@@ -96,13 +96,8 @@
           </v-card>
         </v-dialog>
         </v-card>
-    <v-alert
-      type="success"
-    >
-      I'm a dense alert with the <strong>text</strong> prop and a <strong>type</strong> of success
-    </v-alert>
+        <v-btn onclick="textando()">textando</v-btn>
   </v-layout>
-  
 </template>
 <!-- Style -->
       <style>
@@ -119,16 +114,11 @@
         }
 </style>
 <script>
-        export default {
-          data: () => ({
-            dialog: false,
-<<<<<<< HEAD
-            dialogg: false,
-            show: false, 
-=======
-            show: true,
-            card: false, 
->>>>>>> fb45eeb05c5ff66204049c31f79f070094460d41
-          })
-        }
+  export default {
+    data: () => ({
+      dialog: false,
+      dialogg: false,
+      show: false, 
+    })
+  }
 </script>

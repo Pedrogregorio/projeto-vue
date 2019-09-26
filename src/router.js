@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Login from './views/Login.vue'
+import Login from './views/login/Login.vue'
 import Inicio from './views/Inicio.vue'
 import Menu from './views/Menu.vue'
 import Cartao from './views/Cartao.vue'
