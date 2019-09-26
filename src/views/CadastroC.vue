@@ -114,6 +114,7 @@
         }
 </style>
 <script>
+<<<<<<< HEAD
   export default {
     data: () => ({
       dialog: false,
@@ -121,4 +122,13 @@
       show: false, 
     })
   }
+=======
+        export default {
+          data: () => ({
+            dialog: false,
+            dialogg: false,
+            show: false, 
+          })
+        }
+>>>>>>> ae5222bfe37c3381cf351b272c3bef5e5719fa55
 </script>
